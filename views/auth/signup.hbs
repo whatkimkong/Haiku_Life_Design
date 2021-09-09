@@ -1,0 +1,28 @@
+<div>
+
+  <h2>Signup with Haiku Life Design</h2>
+
+  <form action="/auth/signup" method="POST">
+  
+    <label for="username">Username:</label>
+    <input type="text" name="username" autocomplete="off" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="text" name="email" autocomplete="off" required>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="text" name="password" autocomplete="off" required>
+    <br>
+
+    <button type="submit">Submit</button>
+  
+  </form>
+
+  <p style="color: red">{{errorMessage}}</p>
+
+</div>
+
+
+
