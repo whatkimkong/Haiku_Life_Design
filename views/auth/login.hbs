@@ -1,0 +1,21 @@
+<div>
+
+  <h2>Login to Haiku Life Design</h2>
+
+  <form action="/auth/login" method="POST">
+
+    <label for="email">Email:</label>
+    <input class="input" type="text" name="email" autocomplete="off" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input class="input" type="text" name="password" autocomplete="off" required>
+    <br>
+    <br>
+    <a type="submit" class="btn-mustard">Submit</a>
+  
+  </form>
+
+  <p style="color: red">{{errorMessage}}</p>
+
+</div>

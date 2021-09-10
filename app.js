@@ -19,7 +19,7 @@ const app = express();
 require("./config")(app);
 
 // default value for title local
-const projectName = "cleanser";
+const projectName = "Haiku Life Design";
 const capitalized = (string) =>
   string[0].toUpperCase() + string.slice(1).toLowerCase();
 

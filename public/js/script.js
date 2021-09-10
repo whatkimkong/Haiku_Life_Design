@@ -1,7 +1,7 @@
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("cleanser JS imported successfully!");
+    console.log("Haiku_Life_Design JS imported successfully!");
   },
   false
 );

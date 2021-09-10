@@ -12,3 +12,39 @@ a {
 h1 {
   color: 15px;
 }
+
+.btn-mustard {
+  color: #eac552;
+  text-decoration: none;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #eac552;
+  margin-right: 40px;
+  margin-left: 15px;
+  box-shadow: 0 0 5px #e9e7e2;
+  padding: 8px 5px 8px 5px;
+  margin: 10px 10px 3px 10px;
+  border: 1px solid #eac552;
+}
+
+.input[type=text] {
+  background-color: #c5c5c5;
+  border-radius: 6px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #cfbdbd;
+  color: bisque;
+}
+
+
+.input[type=text]:focus {
+  box-shadow: 0 0 5px #e9e7e2;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #eac552;
+}
