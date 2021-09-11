@@ -1,9 +1,9 @@
 const { Schema, model } = require("mongoose");
 
 const stageSchema = new Schema({
-  name: {
+  title: {
     type: String,
-    required: true,
+    required: true, // eg STAGE 1
   },
   description: {
     type: String,

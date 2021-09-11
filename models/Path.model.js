@@ -44,5 +44,4 @@ const pathSchema = new Schema(
 );
 
 // stages?? where do they come into???
-
 module.exports = model("Path", pathSchema);
