@@ -1,31 +1,49 @@
 <div>
 
+  <a type="text" href="/" class="btn-mustard">Home</a>
+  <a href="/auth/login" class="btn-mustard" role="button">Login!</a>
+
   <h2>Signup with Haiku Life Design</h2>
 
   <form action="/auth/signup" method="POST">
-  
+
     <label for="username">Username:</label>
-    <input class="input" type="text" name="username" autocomplete="off" required>
-    <br>
-    <br>
+    <input
+      class="input"
+      type="text"
+      name="username"
+      autocomplete="off"
+      required
+    />
+    <br />
+    <br />
 
     <label for="email">Email:</label>
-    <input class="input" type="text" name="email" autocomplete="off" required>
-    <br>
-    <br>
+    <input
+      class="input"
+      type="email"
+      name="email"
+      autocomplete="off"
+      required
+    />
+    <br />
+    <br />
 
     <label for="password">Password:</label>
-    <input class="input" type="text" name="password" autocomplete="off" required>
-    <br>
-    <br>
+    <input
+      class="input"
+      type="password"
+      name="password"
+      autocomplete="off"
+      required
+    />
+    <br />
+    <br />
 
-    <a type="submit" class="btn-mustard">Submit</a>
-  
+    <button type="submit" class="btn-mustard">Submit</button>
+
   </form>
 
   <p style="color: red">{{errorMessage}}</p>
 
 </div>
-
-
-

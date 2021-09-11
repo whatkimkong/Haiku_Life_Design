@@ -17,6 +17,10 @@ const favicon = require("serve-favicon");
 // https://www.npmjs.com/package/path
 const path = require("path");
 
+// ℹ️ This are the packages for authentication.
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -35,5 +39,23 @@ module.exports = (app) => {
   app.use(express.static(path.join(__dirname, "..", "public")));
 
   // Handles access to the favicon
-  app.use(favicon(path.join(__dirname, "..", "public", "images", "favicon.ico")));
+  app.use(
+    favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
+  );
+
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET,
+      resave: false,
+      saveUninitialized: false, // doesn't store, sessions without info.
+      cookie: {
+        maxAge: 60 * 60 * 24 * 7, // your cookie will be cleared after these seconds
+      },
+      store: MongoStore.create({
+        mongoUrl:
+          process.env.MONGODB_URI || "mongodb://localhost/Haiku_Life_Design",
+        ttl: 60 * 60 * 24, // your session will be cleared after these seconds
+      }),
+    })
+  );
 };
