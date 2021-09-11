@@ -27,7 +27,7 @@ h1 {
   border: 1px solid #eac552;
 }
 
-.input[type=text] {
+.input[type=text], input[type=email], input[type=password] {
   background-color: #c5c5c5;
   border-radius: 6px;
   -webkit-transition: all 0.30s ease-in-out;
@@ -42,7 +42,7 @@ h1 {
 }
 
 
-.input[type=text]:focus {
+.input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
   box-shadow: 0 0 5px #e9e7e2;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
