@@ -1,4 +1,12 @@
-<p>Here You Can Create a Stage</p>
+<div>
+    <a href="/auth/login" class="btn-mustard">Login!</a>
+    <a href="/auth/signup" class="btn-mustard">Sign Up!</a>
+
+    <a href="/blueprint" class="btn-mustard">Admins - Create Blueprint!</a>
+    <a href="/stage" class="btn-mustard">Admins - Create Stage!</a>
+<br>
+<br>
+</div>
 
 <div>
   <h2> Add a new Stage</h2>
@@ -19,12 +27,12 @@
     <br>
     <br>
 
-    <label for="Tip">Tip </label>
-    <input type="text" name="title">
+    <label for="tip">Tip</label>
+    <textarea name="tip" cols="30" rows="10"></textarea>
     <br>
     <br>
 
-    <label for="admin">Who is posting this:</label>
+    <label for="admin">Which admin is posting this:</label>
     <select name="admin">
     {{#each allAdmins}}
     <option value="{{this.admin_id}}">{{this.username}}</option>

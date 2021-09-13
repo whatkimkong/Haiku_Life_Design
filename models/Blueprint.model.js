@@ -30,4 +30,5 @@ const blueprintSchema = new Schema({
 
 // stages?? where do they come into???
 
-module.exports = model("Blueprint", blueprintSchema);
+const Blueprint = model("Blueprint", blueprintSchema);
+module.exports = Blueprint;

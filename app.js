@@ -34,6 +34,10 @@ const profileRoutes = require("./routes/profile.routes");
 app.use("/", profileRoutes);
 const pathRoutes = require("./routes/path.routes");
 app.use("/", pathRoutes);
+const blueprintRoutes = require("./routes/blueprint.routes");
+app.use("/", blueprintRoutes);
+const stageRoutes = require("./routes/stage.routes");
+app.use("/", stageRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

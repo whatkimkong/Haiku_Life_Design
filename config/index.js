@@ -53,7 +53,7 @@ module.exports = (app) => {
       },
       store: MongoStore.create({
         mongoUrl:
-          process.env.MONGODB_URI || "mongodb://localhost/Haiku_Life_Design",
+          process.env.MONGODB_URI || "mongodb://localhost/haiku-life-design",
         ttl: 60 * 60 * 24, // your session will be cleared after these seconds
       }),
     })

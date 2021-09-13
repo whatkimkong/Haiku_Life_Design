@@ -1,3 +1,14 @@
+
+<div>
+    <a href="/auth/login" class="btn-mustard">Login!</a>
+    <a href="/auth/signup" class="btn-mustard">Sign Up!</a>
+
+    <a href="/blueprint" class="btn-mustard">Admins - Create Blueprint!</a>
+    <a href="/stage" class="btn-mustard">Admins - Create Stage!</a>
+<br>
+<br>
+</div>
+
 <div>
   <h2> Add a new Blueprint</h2>
   <form action="/blueprint" method="POST">
@@ -17,12 +28,7 @@
     <br>
     <br>
 
-    <label for="Stages">Stages: ????? </label>
-    <input type="text" name="title">
-    <br>
-    <br>
-
-    <label for="admin">Who is posting this:</label>
+    <label for="admin">Which admin is posting this:</label>
     <select name="admin">
     {{#each allAdmins}}
     <option value="{{this.admin_id}}">{{this.username}}</option>
