@@ -4,11 +4,19 @@ const blueprintSchema = new Schema({
   type: {
     type: String,
     required: true,
-    enum: ["clothing, shoes & accessories", "electronics & cables", "kitchen" , "bathroom" , "paperwork", "books", "sentimental", "miscellaneous"],
+    enum: [
+      "clothing, shoes & accessories",
+      "electronics & cables",
+      "kitchen",
+      "bathroom",
+      "paperwork",
+      "books",
+      "sentimental",
+      "miscellaneous",
+    ],
   },
   description: {
     type: String,
-    required: true,
   },
   title: {
     type: String,
@@ -16,16 +24,18 @@ const blueprintSchema = new Schema({
   },
   admin_id: {
     type: Schema.Types.ObjectId,
-    ref: "User"
+    ref: "User",
   },
-  stages: [{
-    type: Schema.Types.ObjectId,
-    ref: "Stage"
-  }],
-  
+  stages: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Stage",
+    },
+  ],
+
   // created: {
-//     type: Timestamp,
-//   },
+  //     type: Timestamp,
+  //   },
 });
 
 // stages?? where do they come into???

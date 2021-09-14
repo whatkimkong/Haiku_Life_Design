@@ -1,11 +1,11 @@
 <div>
-    <a href="/auth/login" class="btn-mustard">Login!</a>
-    <a href="/auth/signup" class="btn-mustard">Sign Up!</a>
+  <a href="/auth/login" class="btn-mustard">Login!</a>
+  <a href="/auth/signup" class="btn-mustard">Sign Up!</a>
 
-    <a href="/blueprint" class="btn-mustard">Admins - Create Blueprint!</a>
-    <a href="/stage" class="btn-mustard">Admins - Create Stage!</a>
-<br>
-<br>
+  <a href="/blueprint" class="btn-mustard">Admins - Create Blueprint!</a>
+  <a href="/stage" class="btn-mustard">Admins - Create Stage!</a>
+  <br />
+  <br />
 </div>
 
 <div>
@@ -13,34 +13,26 @@
   <form action="/stage" method="POST">
 
     <label for="title">Type:</label>
-    <input type="text" name="title">
-    <br>
-    <br>
+    <input type="text" name="title" />
+    <br />
+    <br />
 
     <label for="title">Title:</label>
-    <input type="text" name="title">
-    <br>
-    <br>
+    <input type="text" name="title" />
+    <br />
+    <br />
 
     <label for="description">Description</label>
     <textarea name="description" cols="30" rows="10"></textarea>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <label for="tip">Tip</label>
     <textarea name="tip" cols="30" rows="10"></textarea>
-    <br>
-    <br>
+    <br />
+    <br />
 
-    <label for="admin">Which admin is posting this:</label>
-    <select name="admin">
-    {{#each allAdmins}}
-    <option value="{{this.admin_id}}">{{this.username}}</option>
-    {{/each}}
-    </select>
-
-    <br>
-    <button type="submitbutton" class="btn-mustard">Add Stage!</button>
+    <button type="submit" class="btn-mustard">Add Stage!</button>
 
   </form>
 </div>
