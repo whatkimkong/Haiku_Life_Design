@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const BlueprintModel = require("../models/Blueprint.model");
 // const PathModel = require("../models/Path.model");
-// const StageModel = require("../models/Stage.model");
+const StageModel = require("../models/Stage.model");
 
 // GET - will be at /blueprint
 router.get("/blueprint", (req, res, next) => {
@@ -39,8 +39,19 @@ router.post("/blueprint/:id/stage", (req, res, next) => {
   // Stage.create...
   // use the stage already created and push it into the blueprint stages array
   // Blueprint.finByIdAndUpdate(blueprintId, { })
-  Stage.create.push(blueprintId);
-  Blueprint.finByIdAndUpdate(blueprintId, {});
+  // res.redirect(`/blueprint/:id/stage`), {freshlyCreatedStage})
+  //.push(blueprintId);
+  // in the stage thing we will have BUTTON either make another stage or finish! Stage VIEW
+
+  const { title, description, tip } = req.body;
+  StageModel.create({ title, description, tip })
+        .then((freshlyCreatedStage) => {
+            return Blueprint.findByIdAndUpdate(req.params.id , { $push: { stages: freshlyCreatedStage._id }}, { new: true});
+        })
+        .then((freshlyUpdatedBlueprint) => {
+            res.redirect(`/blueprint/${freshlyUpdatedBlueprint._id}/stage`)
+        })
+        .catch((err) => console.log(err));
 });
 
 module.exports = router;
