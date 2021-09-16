@@ -10,7 +10,7 @@
 
 <div>
   <h2> Add a new Stage</h2>
-  <form action="/stage" method="POST">
+  <form action="/blueprint/{{blueprintId}}/stage" method="POST">
 
     <label for="title">Title:</label>
     <input type="text" name="title" />
@@ -27,7 +27,6 @@
     <br />
     <br />
 
-    <button type="submit" class="btn-mustard">Add Another Stage!</button>
-    <button type="submit" class="btn-mustard">Finish!</button>
+    <button type="submit" class="btn-mustard">Save this stage</button>
   </form>
 </div>

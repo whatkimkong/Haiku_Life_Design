@@ -1,12 +1,18 @@
 
 <div>
-  <h2> Add a new Path</h2>
-  <form action="" method="POST">
+  <h2> Choose a new Path</h2>
+  <form action="/paths/{{pathId}}/path" method="POST">
 
-    <label for="type">Choose Your Next Victim Category:</label>
+    {{!-- <label for="type">Choose Your Next Victim Category:</label>
     <input type="text" name="type">
-    <br> 
-    <br>
+    <br> USING THE BLUEPRINT we just made in the db >>> based on the blueprints available
+    <br> --}}
+
+    <select name="blueprints">
+    {{#each blueprints}}
+    <option value="{{this._id}}">{{this.title}}</option>
+    {{/each}}
+    </select>
 
     <label for="title">Title:</label>
     <input type="text" name="title">
@@ -18,24 +24,9 @@
     <br>
     <br>
 
-    <select name="pathType">
-    {{#each path}}
-    <option value="{{this.pathType}}">{{this.pathType}}</option>
-    {{/each}}
-    </select>
+    <button type="submit" class="btn-mustard">Add Path!</button>
 
+</form>
 
-    <p> Pick one of our selected Possession Paths to begin your Minimalistic Haiku Journey.
-        It helps to Name it by what exactly you are focusing on.</p>
-    <br>
-    <p>Next you will see the broken down Stages we have mapped out to help you to rid yourself of the excess baggage</p>
-    <br>
-    <p> SHOULD BE ON A TIP CARD?? >> We developed this system also for those in a rush, short on time.. SO, if that is you:</p>
-    <br>
-    <p>Don't worry, just pick a drawer! a shelf, your desk -</p>
-    <p>We have tried and tested this, there is no need to overwhelm yourself, 
-        the benefit of breaking these tasks into small chunks is paramount.
-        It still gets the job DONE and you can be VERY proud that you are doing it
-        all the while being a busy bee in your daily life or juggling a kid.</p>
-    <br>
+<!--- NEXT . create a path with correct info . POST route for this . for Path creation >
 </div>

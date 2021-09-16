@@ -22,6 +22,19 @@
 # BLUEPRINT DRAFTS #
 
 
+# PATH TEXT #
+   Pick one of our selected Possession Paths to begin your Minimalistic Haiku Journey.
+        It helps to Name it by what exactly you are focusing on.
+
+Next you will see the broken down Stages we have mapped out to help you to rid yourself of the excess baggage
+
+SHOULD BE ON A TIP CARD?? >> We developed this system also for those in a rush, short on time.. SO, if that is you:
+
+Don't worry, just pick a drawer! a shelf, your desk -
+We have tried and tested this, there is no need to overwhelm yourself, 
+        the benefit of breaking these tasks into small chunks is paramount.
+        It still gets the job DONE and you can be VERY proud that you are doing it
+        all the while being a busy bee in your daily life or juggling a kid.
 
 
 
@@ -79,7 +92,7 @@ Description
 Tip
 
 
-
+SADOMASOPATHHHHHHHHHHHHH credit:filipe
 
 
 # FURTHER DAYDREAMS MAYBE TO EXPLORE #
