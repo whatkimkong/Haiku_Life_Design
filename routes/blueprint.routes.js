@@ -44,14 +44,7 @@ router.post("/blueprint/:id/stage", (req, res, next) => {
   // in the stage thing we will have BUTTON either make another stage or finish! Stage VIEW
 
 
-
-
-
-
-
-
 // GET - will be at /blueprint
-
 // router.get('/blueprint', (req ,res, next) => {
 //     const { id } = req.params;
 //     BlueprintModel.findById(id)
