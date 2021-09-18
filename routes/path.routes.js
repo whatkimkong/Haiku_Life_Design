@@ -31,12 +31,15 @@ router.post("/paths/create", (req, res, next) => {
     });
 });
 
-// path for paths/path_id // grab the information from the path // use the INDEX of the ARRAY [] if there is 1 image = stage 2, 
+router.get("/paths/:id", (req, res, next) => {
+  PathModel.findById(req.params.id).then((path) => {
+    res.render("paths/path.hbs");
+  });
+});
+
+// path for paths/path_id // grab the information from the path
+// use the INDEX of the ARRAY [] if there is 1 image = stage 2, 
 // 
-
-// NEXT // create a path with correct info // POST route for this >> for Path creation //
-
-
 
 
 // GET '/dashboard' => to logout the user (remove the session)
