@@ -4,37 +4,44 @@ const BlueprintModel = require("../models/Blueprint.model");
 const PathModel = require("../models/Path.model");
 // const StageModel = require("../models/Stage.model");
 
-// GET '/dashboard' => to logout the user (remove the session)
-router.get("/dashboard", (req, res, next) => {
-  res.render("paths/dashboard.hbs"); // RENDER THE VIEW // SHOW THIS VIEW
-});
-
 router.get("/path", (req, res, next) => {
   BlueprintModel.find().then((blueprints) => {
     res.render("paths/add-path.hbs", { blueprints });
   });
 });
 
-router.post("/path", (req, res, next) => {
-  const { blueprints, title, description } = req.body;
-  PathModel.create({ blueprints, title, description })
+router.post("/paths/create", (req, res, next) => {
+  // receive the information from the form
+  const { blueprint_id, title, description } = req.body;
+  if(!req.session.loggedInUser){
+    res.redirect('/path')
+    return;
+  }
+  const user_id = req.session.loggedInUser._id;
+  // create path modeled on the selected blueprint
+  BlueprintModel.findById(blueprint_id)
+    .then((blueprint) => {
+      return PathModel.create({ blueprint_id, title, description, user_id, type: blueprint.type, stages: blueprint.stages })
+    })
     .then((freshlyCreatedPath) => {
-      return PathModel.findByIdAndUpdate(
-        req.params.id,
-        { $push: { stages: freshlyCreatedPath._id } },
-        { new: true }
-      );
+      res.redirect(`/paths/${freshlyCreatedPath._id}`);
     })
-    .then((freshlyUpdatedPath) => {
-      res.redirect(`/paths/${freshlyUpdatedPath._id}/path`);
-    })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      next(err)
+    });
 });
 
-router.get("/paths/:id/path", (req, res, next) => {
-  res.render("paths/path.hbs", { pathId: req.params.id });
-});
+// path for paths/path_id // grab the information from the path // use the INDEX of the ARRAY [] if there is 1 image = stage 2, 
+// 
 
 // NEXT // create a path with correct info // POST route for this >> for Path creation //
+
+
+
+
+// GET '/dashboard' => to logout the user (remove the session)
+router.get("/dashboard", (req, res, next) => {
+  res.render("paths/dashboard.hbs"); // RENDER THE VIEW // SHOW THIS VIEW
+});
 
 module.exports = router;

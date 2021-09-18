@@ -1,16 +1,16 @@
 
 <div>
   <h2> Choose a new Path</h2>
-  <form action="/paths/{{pathId}}/path" method="POST">
+  <form action="/paths/create" method="POST">
 
     {{!-- <label for="type">Choose Your Next Victim Category:</label>
     <input type="text" name="type">
     <br> USING THE BLUEPRINT we just made in the db >>> based on the blueprints available
     <br> --}}
 
-    <select name="blueprints">
+    <select name="blueprint_id">
     {{#each blueprints}}
-    <option value="{{this._id}}">{{this.title}}</option>
+      <option value="{{this._id}}">{{this.title}}</option>
     {{/each}}
     </select>
 
@@ -28,5 +28,4 @@
 
 </form>
 
-<!--- NEXT . create a path with correct info . POST route for this . for Path creation >
 </div>
