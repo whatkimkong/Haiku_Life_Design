@@ -20,11 +20,8 @@ h1 {
   border-width: 1px;
   border-radius: 8px;
   border-color: #eac552;
-  margin-right: 40px;
-  margin-left: 15px;
   box-shadow: 0 0 5px #e9e7e2;
-  padding: 8px 5px 8px 5px;
-  margin: 10px 10px 3px 10px;
+  padding: 5px 3px 5px 3px;
   border: 1px solid #eac552;
 }
 
@@ -48,4 +45,15 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #eac552;
+}
+
+center {
+  display: flexbox;
+  justify-content: center;
+  flex-direction: column;
+}
+
+space {
+  justify-content: center;
+  padding: 100px;
 }

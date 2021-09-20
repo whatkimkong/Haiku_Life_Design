@@ -32,6 +32,8 @@ const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 // const profileRoutes = require("./routes/profile.routes");
 // app.use("/", profileRoutes);
+const thingshuiRoutes = require("./routes/thingshui.routes");
+app.use("/", thingshuiRoutes);
 const pathRoutes = require("./routes/path.routes");
 app.use("/", pathRoutes);
 const blueprintRoutes = require("./routes/blueprint.routes");

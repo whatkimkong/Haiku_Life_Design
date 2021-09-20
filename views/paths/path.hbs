@@ -3,13 +3,14 @@
 
     <p>SEE YOUR PATH>> STAGE 1</p>
 
-{{#if (images.length 1)}}
-  STAGE 2
-{{/if}}
+{{#each blueprint}}
+    <h1> {{this.title}} the title we wrote for the blueprint</h1> 
+{{/each}}
 
-{{#if (images.length 2)}}
-  STAGE 3
-{{/if}}
-
+{{#each freshlyCreatedPath}}
+    <h4> {{this.type}} its type AKA kitchen, or paperwork </h1>
+    <h5> {{this.title}} the title the user calls it </h2>
+    <p> {{this.description}} their description of whats happening </p>
+{{/each}}
 
 </div>

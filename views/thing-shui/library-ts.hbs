@@ -1,3 +1,26 @@
-<di>
+<div>
     <h2>Your Thing Shui Memento Chest</h2>
-</di>
+
+    <br>
+    <a href="/thingshui/create" class="btn-mustard">Add a thing shui</a>
+    <br>
+    <br>
+
+    <div class="" style="width: 18rem;">
+        {{#each thingshuis}}
+            {{#if image}}
+            <img class="card" src="{{this.image}}" alt="Card image cap">
+            {{/if}}
+        
+        <div class="card-body">
+            <p class="card-text title-text">{{this.title}}</p>
+            <a class="btn-mustard" href="" role="button">Edit the Thing</a>
+        </div>
+       
+        <br>
+        <hr>
+        {{/each}}
+    </div>
+
+    <br>
+</div>
