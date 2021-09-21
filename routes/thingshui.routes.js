@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const ThingshuiModel = require("../models/Thingshui.model");
 
+// ********* require fileUploader in order to use it *********
+const imageUploader = require('../config/cloudinary.config');
 
 router.get("/thingshui", (req, res, next) => {
     ThingshuiModel.find().then((thingshuis) => {

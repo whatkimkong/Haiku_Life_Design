@@ -4,6 +4,13 @@ const BlueprintModel = require("../models/Blueprint.model");
 const PathModel = require("../models/Path.model");
 // const StageModel = require("../models/Stage.model");
 
+// ... all imports stay unchanged
+// ********* require fileUploader in order to use it *********
+const imageUploader = require('../config/cloudinary.config');
+
+//... all the routes stay unchanged
+
+
 router.get("/path", (req, res, next) => {
   BlueprintModel.find().then((blueprints) => {
     res.render("paths/add-path.hbs", { blueprints });
@@ -32,10 +39,22 @@ router.post("/paths/create", (req, res, next) => {
 });
 
 router.get("/paths/:id", (req, res, next) => {
-  PathModel.findById(req.params.id).then((path) => {
-    res.render("paths/path.hbs");
+  PathModel.findById(req.params.id).populate("stages")
+  .then((path) => {
+    const stage = path.stages[path.images.length]
+    const isFinished = !stage;
+    res.render("paths/path.hbs", { stage, path, isFinished });
   });
 });
+
+router.post("/paths/:id", imageUploader.single('imageUrl') ,(req, res, next) => {
+  const imageUrl = req.file.path; // LOOK AT THIS BEAUTY 
+  PathModel.findByIdAndUpdate(req.params.id, { $push: { images: imageUrl }}, { new: true })
+  .then((freshlyUpdatedPath) => {
+    console.log(freshlyUpdatedPath)
+    res.redirect(`/paths/${freshlyUpdatedPath._id}`);
+  });
+}); 
 
 // path for paths/path_id // grab the information from the path
 // use the INDEX of the ARRAY [] if there is 1 image = stage 2, 
