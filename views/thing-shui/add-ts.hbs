@@ -1,16 +1,50 @@
+<div class="icons">
+    <ul class="icons">
+        <li class="icon-l">
+            <a href="/">Home</a>
+        </li>
+        <li class="icon-l">
+            <a href="/path">Paths</a>
+        </li>
+        <li class="icon-l">
+            <a href="/thingshui">THSH</a>
+        </li>
+        <li class="icon-l">
+
+        </li>
+    </ul>
+    <ul class="icons">
+        <li class="icon-r">
+
+        </li>
+        {{#if isLoggedIn}}
+        <li class="icon-r">
+            <a href="/auth/logout">Log Out!</a>
+        </li>
+        {{else}}
+        <li class="icon-r">
+            <a href="/auth/login">Log in</a>
+        </li>
+        <li class="icon-r">
+            <a href="/auth/signup">Sign Up</a>
+        </li>
+        {{/if}}
+        
+        <li class="icon-r">
+            <a href="/auth/signup">Settings</a>
+        </li>
+    </ul>
+</div>
+
 <div>
   <h2> Add a Treasure to your Memento Box</h2>
   <form action="/thingshui/create" method="POST">
 
     <label for="title">Title:</label>
     <input type="text" name="title">
-    <br>
-    <br>
 
     <label for="description">Description:</label>
     <textarea name="description" cols="30" rows="10"></textarea>
-    <br>
-    <br>
 
     <button type="submit" class="btn-mustard">Thing Shui your Thing</button>
 
@@ -18,6 +52,7 @@
 </div>
 
 <div>
+ <footer class="footerIndex">
     <p>IN THE PROCESS OF ACHIEVING A MORE MINIMAL LIFESTYLE....
         Some of us, namely at least half of the creators of this App, 
         attach sentimental value to EVERYTHING. There is little need for the physical item 
@@ -32,4 +67,5 @@
     <p>SHOULD BE ON A TIP CARD?? >> In the future, before you take some new tat home, try instead 
         to save a picture of it in your THING SHUI and rescue its dignity 
         from being another non-essential item in your home.</p>
+ </footer>
 </div>

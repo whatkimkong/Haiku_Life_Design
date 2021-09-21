@@ -36,31 +36,9 @@
     </ul>
 </div>
 
-{{#if isLoggedIn }}
-
 <div>
-  <form action="/paths/create" method="POST" class="formScript">
-
-    <label for="blueprint_id">Choose The Next Breathable Area:</label>
-    <select name="blueprint_id">
-    {{#each blueprints}}
-      <option value="{{this._id}}">{{this.title}}</option>
-    {{/each}}
-    </select>
-
-    <label for="title">Title:</label>
-    <input type="text" name="title">
-
-    <label for="description">Description:</label>
-    <textarea name="description" cols="30" rows="10"></textarea>
-
-    <button type="submit" class="btn-mustard">Add Path!</button>
-</form>
+    <p>Upload your profile photo - cloundinary</p>
+    <p>Username, >> INPUT FIELD >> Bio >> change password >> >> little quotes >>
+        CHOOSE YOUR AVATAR >> CHECK ICONS CSS ON WIREFRAME FOR EXAMPLE.
+    ?? profile photo serves purpose if conversations exist</p>
 </div>
-
-{{else }}
-
-<h1>Your Mess is Missin' Out!!<h1>
-<h4>Sign up to Haiku your life down to the bare necessities</h4>
-  
-{{/if }}

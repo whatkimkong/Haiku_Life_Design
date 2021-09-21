@@ -1,12 +1,64 @@
-<div>
-    <a href="/auth/logout" class="btn-mustard">Log Out!</a>
+<div class="icons">
+    <ul class="icons">
+        <li class="icon-l">
+            <a href="/">Home</a>
+        </li>
+        <li class="icon-l">
+            <a href="/path">Paths</a>
+        </li>
+        <li class="icon-l">
+            <a href="/thingshui">THSH</a>
+        </li>
+        <li class="icon-l">
 
-    <a href="/path" class="btn-mustard">Add a Path!</a>
+        </li>
+    </ul>
+    <ul class="icons">
+        <li class="icon-r">
 
-
-    <p> HERE IS DASHBOARD -> OVERVIEW OF PATHS.... we go here after loggin in </p>
-
-    <p> ADD PATH LINK >>> </p>
-    
-    <p> redirect to homepage >>> </p>
+        </li>
+        {{#if isLoggedIn}}
+        <li class="icon-r">
+            <a href="/auth/logout">Log Out!</a>
+        </li>
+        {{else}}
+        <li class="icon-r">
+            <a href="/auth/login">Log in</a>
+        </li>
+        <li class="icon-r">
+            <a href="/auth/signup">Sign Up</a>
+        </li>
+        {{/if}}
+        
+        <li class="icon-r">
+            <a href="/auth/signup">Settings</a>
+        </li>
+    </ul>
 </div>
+
+<div>
+<h4>PATH DASHBOARD</h4>
+
+
+<div class="haiku-card">
+    {{#each paths}}
+    <div class="haiku-border" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{this.type}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{this.title}}</h6>
+            <p class="card-text">{{this.stage}}</p>
+            <a href="#" class="card-link">Continue on this path</a>
+            <a href="#" class="card-link">Delete</a>
+        </div>
+    </div>
+    <br>
+    {{/each}}
+</div>
+
+
+{{#if isFinished }}
+    {{#each path.images}}
+
+    {{/each}}
+{{else }}
+{{/if}}

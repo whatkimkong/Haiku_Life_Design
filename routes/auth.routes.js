@@ -112,6 +112,9 @@ router.post("/login", (req, res, next) => {
 
           // creating global variables in hbs to help with auth. To be used to display navigational information to users loggedIn like anchor tags to private pages.
           req.app.locals.isLoggedIn = true;
+          if(user.type === "admin") {
+            req.app.locals.isAdmin = true;
+          }
 
           // 5. redirect the user to private route like OUR '/dashboard' <3
           res.redirect("/dashboard");
@@ -135,7 +138,10 @@ router.post("/login", (req, res, next) => {
 
 // GET '/auth/logout' => to logout the user (remove the session)
 router.get("/logout", (req, res, next) => {
-  req.session.destroy(); // this removes the active session "req.session.loggedInUser" and also removes stored session from DB.
+  req.session.destroy();
+  req.app.locals.isLoggedIn = false;
+  req.app.locals.isAdmin = false;
+  // this removes the active session "req.session.loggedInUser" and also removes stored session from DB.
   res.redirect("/");
 });
 

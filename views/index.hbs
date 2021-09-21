@@ -1,3 +1,13 @@
+  {{#if isAdmin}}
+  <span class="indexBtns">
+    <button class="btn-mustard">
+      <a href="/blueprint">Admins - Create Blueprint</a>
+    </button>
+    <button class="btn-mustard">
+      <a href="/stage">Admins - Create Stage</a>
+    </button>
+  </span>
+
 <div class="indexContainer">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -11,7 +21,7 @@
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
-      >
+>
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,6 +47,47 @@
       </div>
     </div>
   </nav>
+</div>
+{{/if }}
+
+
+<div class="icons">
+    <ul class="icons">
+        <li class="icon-l">
+            <a href="/">Home</a>
+        </li>
+        <li class="icon-l">
+            <a href="/path">Paths</a>
+        </li>
+        <li class="icon-l">
+            <a href="/thingshui">THSH</a>
+        </li>
+        <li class="icon-l">
+
+        </li>
+    </ul>
+    <ul class="icons">
+        <li class="icon-r">
+
+        </li>
+        {{#if isLoggedIn}}
+        <li class="icon-r">
+            <a href="/auth/logout">Log Out!</a>
+        </li>
+        {{else}}
+        <li class="icon-r">
+            <a href="/auth/login">Log in</a>
+        </li>
+        <li class="icon-r">
+            <a href="/auth/signup">Sign Up</a>
+        </li>
+        {{/if}}
+        
+        <li class="icon-r">
+            <a href="/auth/signup">Settings</a>
+        </li>
+    </ul>
+</div>
 
   <ul class="indexList">
     <li>
@@ -50,14 +101,6 @@
     </li>
   </ul>
 
-  <span class="indexBtns">
-    <button class="btn-mustard">
-      <a href="/blueprint">Admins - Create Blueprint</a>
-    </button>
-    <button class="btn-mustard">
-      <a href="/stage">Admins - Create Stage</a>
-    </button>
-  </span>
 
   <footer class="footerIndex">
     Haiku Life Design is brought to you by Passionate Developers, Life Coaches,

@@ -1,3 +1,42 @@
+<div class="icons">
+    <ul class="icons">
+        <li class="icon-l">
+            <a href="/">Home</a>
+        </li>
+        <li class="icon-l">
+            <a href="/path">Paths</a>
+        </li>
+        <li class="icon-l">
+            <a href="/thingshui">THSH</a>
+        </li>
+        <li class="icon-l">
+
+        </li>
+    </ul>
+    <ul class="icons">
+        <li class="icon-r">
+
+        </li>
+        {{#if isLoggedIn}}
+        <li class="icon-r">
+            <a href="/auth/logout">Log Out!</a>
+        </li>
+        {{else}}
+        <li class="icon-r">
+            <a href="/auth/login">Log in</a>
+        </li>
+        <li class="icon-r">
+            <a href="/auth/signup">Sign Up</a>
+        </li>
+        {{/if}}
+        
+        <li class="icon-r">
+            <a href="/auth/signup">Settings</a>
+        </li>
+    </ul>
+</div>
+
+
 {{#if isFinished }}
     <h1>You're finished and 1 step closer of being an haiku master!</h1>
     <h3>Here's the journey...</h3>
@@ -9,7 +48,7 @@
         <img src="{{ this }}" alt="" srcset="">
         {{/if}}
     {{/each}}
-{{ else }}
+{{else }}
 
 <div>
         <br>

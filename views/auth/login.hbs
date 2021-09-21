@@ -1,9 +1,42 @@
-<div>
+<div class="icons">
+    <ul class="icons">
+        <li class="icon-l">
+            <a href="/">Home</a>
+        </li>
+        <li class="icon-l">
+            <a href="/path">Paths</a>
+        </li>
+        <li class="icon-l">
+            <a href="/thingshui">THSH</a>
+        </li>
+        <li class="icon-l">
 
-  <a type="text" href="/" class="btn-mustard">Home</a>
-  <a href="/auth/signup" class="btn-mustard" role="button">Sign Up!</a>
-<br>
-<br>
+        </li>
+    </ul>
+    <ul class="icons">
+        <li class="icon-r">
+
+        </li>
+        {{#if isLoggedIn}}
+        <li class="icon-r">
+            <a href="/auth/logout">Log Out!</a>
+        </li>
+        {{else}}
+        <li class="icon-r">
+            <a href="/auth/login">Log in</a>
+        </li>
+        <li class="icon-r">
+            <a href="/auth/signup">Sign Up</a>
+        </li>
+        {{/if}}
+        
+        <li class="icon-r">
+            <a href="/auth/signup">Settings</a>
+        </li>
+    </ul>
+</div>
+
+<div>
   <h2>Login to Haiku Life Design</h2>
 
   <form action="/auth/login" method="POST">
@@ -20,12 +53,8 @@
       autocomplete="off"
       required
     />
-    <br />
-    <br />
     <button type="submit" class="btn-mustard">Submit</button>
-
   </form>
 
   <p style="color: rgb(102, 99, 99)">{{errorMessage}}</p>
-
 </div>
