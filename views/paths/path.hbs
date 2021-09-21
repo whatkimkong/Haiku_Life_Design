@@ -1,16 +1,28 @@
+{{#if isFinished }}
+    <h1>You're finished and 1 step closer of being an haiku master!</h1>
+    <h3>Here's the journey...</h3>
+    {{#each path.images}}
+        {{#if @first}}
+        <img src="{{ this }}" alt="" srcset="">
+        {{/if}}
+        {{#if @last}}
+        <img src="{{ this }}" alt="" srcset="">
+        {{/if}}
+    {{/each}}
+{{ else }}
+
 <div>
-    <a href="/auth/logout" class="btn-mustard">Log Out!</a>
+        <br>
+        <h4>{{ stage.title }}</h4>
+        <br>
+        <h2>{{ stage.description }} </h2>
+        <br>
+        <h1>{{ stage.tip }}</h1>
 
-    <p>SEE YOUR PATH>> STAGE 1</p>
-
-{{#each blueprint}}
-    <h1> {{this.title}} the title we wrote for the blueprint</h1> 
-{{/each}}
-
-{{#each freshlyCreatedPath}}
-    <h4> {{this.type}} its type AKA kitchen, or paperwork </h1>
-    <h5> {{this.title}} the title the user calls it </h2>
-    <p> {{this.description}} their description of whats happening </p>
-{{/each}}
-
+    <form action="/paths/{{path._id}}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="imageUrl" />
+        <button type="submit" class="btn-mustard">Level Up!!!!!</button>
+    </form>
 </div>
+{{/if  }}
+
