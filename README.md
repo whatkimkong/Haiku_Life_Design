@@ -9,6 +9,11 @@
 "sentimental",
 "miscellaneous",
 
+
+>>>> I DONT THINK WE NEED ANYTHING ELSE HERE ::: 
+Do we need to describe this shit? 
+
+
 # paths
 
 # views
@@ -77,10 +82,10 @@ Are you having flashbacks with certain items or small random bits? Is it somethi
 >> Stage 4  : Title 
 
 Description
-Bring about some order - organise
+Now its time to put your beloved things back, try to organise them in ways that help you use them, see them better, do not underestimate the power of putting things in boxes.
 
 Tip
-Shoe boxes, egg boxes, how to make things tidier
+If you haven't enough time or money to buy different sized boxes, gather Shoe boxes, cut off the lids of some if need be, the base of an egg box can hold many small items like rubbers or screws inside the drawer. Folding things in vertical rolls like a clothing filing cabinet can make access quicker, and if within boxes - those can be even stacked within drawers!
 
 >> Stage 5 : Title 
 
@@ -88,7 +93,7 @@ Description
 You have done it, to complete the process, take a picture of your end result!!! <3
 
 Tip
-
+--
 
 # FURTHER DAYDREAMS MAYBE TO EXPLORE #
 
