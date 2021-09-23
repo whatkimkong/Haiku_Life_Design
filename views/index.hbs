@@ -1,10 +1,10 @@
-{{#if isAdmin}}
+
   <span class="indexBtns">
     <button class="btn-mustard">
-      <a href="/blueprint">Admins - Create Blueprint</a>
+      
     </button>
     <button class="btn-mustard">
-      <a href="/stage">Admins - Create Stage</a>
+      
     </button>
   </span>
 {{/if }}
@@ -27,7 +27,14 @@
     </ul>
     <ul class="icons">
         <li class="icon-r">
-
+        
+        </li>
+        {{#if isAdmin}}
+        <li class="icon-r">
+            <a href="/blueprint">Create Blueprint</a>
+        </li>
+        <li class="icon-r">
+            <a href="/stage">Create Stage</a>
         </li>
         {{#if isLoggedIn}}
         <li class="icon-r">
