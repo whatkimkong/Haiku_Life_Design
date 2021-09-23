@@ -14,7 +14,6 @@ router.get("/thingshui/create", (req, res, next) => {
     res.render("thing-shui/add-ts.hbs", { thing });
 });
   
-
 router.post("/thingshui/create", imageUploader.single('imageUrl') ,(req, res, next) => {
     const imageUrl = req.file.thing; // is this correct?
     const { title, description } = req.body; // and the image?
@@ -26,6 +25,18 @@ router.post("/thingshui/create", imageUploader.single('imageUrl') ,(req, res, ne
       next(err)
     });
 });
+
+
+router.post('/thingshui/:id/delete', (req, res) => {
+    const { id } = req.params;
+    ThingshuiModel.findByIdAndDelete(id)
+        .then(() => { 
+            res.redirect(`/thingshui`);
+         })
+        .catch((err) => {
+            console.log(err);
+        });
+})
 
 
 // only if they log in <3 

@@ -163,17 +163,7 @@ textarea:focus, select:focus {
   display: flex;
 }
 
-.btn-mustard {
-  color: #eac552;
-  background-color: #bbaaaa;
-  text-decoration: none;
-  border-width: 1px;
-  border-radius: 8px;
-  border-color: #eac552;
-  box-shadow: 0 0 5px #e9e7e2;
-  padding: 5px 3px 5px 3px;
-  border: 1px solid #eac552;
-}
+
 
 /* ---------PATH DASHBOARD-------------- */
 
