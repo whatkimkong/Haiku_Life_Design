@@ -47,8 +47,11 @@
             <h5 class="card-title">{{this.type}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{this.title}}</h6>
             <p class="card-text">{{this.stage}}</p>
-            <a href="#" class="card-link">Continue on this path</a>
-            <a href="#" class="card-link">Delete</a>
+            <a href="/paths/{{this._id}}" class="card-link">Continue on this path</a>
+
+            <form action="/paths/{{ this._id }}/delete" method="POST">
+            <button type="submit" class="btn-mustard">Delete</button>
+            </form>
         </div>
     </div>
     <br>

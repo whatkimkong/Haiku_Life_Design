@@ -11,13 +11,13 @@ router.get("/thingshui", (req, res, next) => {
 });
 
 router.get("/thingshui/create", (req, res, next) => {
-    res.render("thing-shui/add-ts.hbs", { thing });
+    res.render("thing-shui/add-ts.hbs");
 });
   
 router.post("/thingshui/create", imageUploader.single('imageUrl') ,(req, res, next) => {
-    const imageUrl = req.file.thing; // is this correct?
+    const image = req.file.path; // is this correct?
     const { title, description } = req.body; // and the image?
-    ThingshuiModel.create({title, description, $push: { images: imageUrl }} , { new: true } )
+    ThingshuiModel.create({title, description, image })
     .then((freshlyCreatedThing) => {
         res.redirect(`/thingshui/${freshlyCreatedThing._id}`); // back to the library where they are all displayed 
     })
@@ -26,6 +26,12 @@ router.post("/thingshui/create", imageUploader.single('imageUrl') ,(req, res, ne
     });
 });
 
+router.get("/thingshui/:id", (req, res, next) => {
+    ThingshuiModel.findById(req.params.id).populate()
+        .then((thing) => {
+          res.render("thing-shui/thing.hbs", { thing });
+        });
+});
 
 router.post('/thingshui/:id/delete', (req, res) => {
     const { id } = req.params;

@@ -60,10 +60,10 @@ router.post("/paths/:id", imageUploader.single('imageUrl') ,(req, res, next) => 
 // use the INDEX of the ARRAY [] if there is 1 image = stage 2, 
 // 
 
-
 // GET '/dashboard' => to logout the user (remove the session)
 router.get("/dashboard", (req, res, next) => {
-  PathModel.find().then((paths) => {
+  PathModel.find().populate()
+  .then((paths) => {
   res.render("paths/dashboard.hbs", {paths}); // RENDER THE VIEW // SHOW THIS VIEW
   });
 });

@@ -14,7 +14,10 @@ const thingshuiSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-    images: [String]
+    image: {
+      type: String,
+      required: true,
+    },
 },
   {
     timestamps: true,
