@@ -1,17 +1,22 @@
 <div class="icons">
-    <ul class="icons">
-        <li class="icon-l">
-            <a href="/"><img src="/images/home.png"></a>
-         
-        </li>
-        <li class="icon-l">
-            <a href="/path"><img src="/images/paths.png"></a>
-        </li>
-        <li class="icon-l">
-            <a href="/thingshui"><img src="/images/thingshui.png"></a>
-        </li>
-        <li class="icon-l">
+  <ul class="icons">
+    <li class="icon-l">
+      <a href="/"><img src="/images/home.png" /></a>
+    </li>
+    <li class="icon-l">
+      <a href="/path"><img src="/images/paths.png" /></a>
+    </li>
+    <li class="icon-l">
+      <a href="/thingshui"><img src="/images/thingshui.png" /></a>
+    </li>
+    <li class="icon-l">
 
+    </li>
+  </ul>
+  <ul class="icons">
+    <li class="icon-r">
+
+<<<<<<< HEAD
         </li>
     </ul>
     <ul class="icons">
@@ -43,6 +48,33 @@
             <a href="/auth/signup"><img src="/images/settings.png"></a>
         </li>
     </ul>
+=======
+    </li>
+    {{#if isAdmin}}
+      <li class="icon-r">
+        <a href="/blueprint">Create Blueprint</a>
+      </li>
+      <li class="icon-r">
+        <a href="/stage">Create Stage</a>
+      </li>
+    {{/if}}
+    {{#if isLoggedIn}}
+      <li class="icon-r">
+        <a href="/auth/logout">Log Out!</a>
+      </li>
+    {{else}}
+      <li class="icon-r">
+        <a href="/auth/login">Log in</a>
+      </li>
+      <li class="icon-r">
+        <a href="/auth/signup">Sign Up</a>
+      </li>
+    {{/if}}
+    <li class="icon-r">
+      <a href="/auth/signup"><img src="/images/settings.png" /></a>
+    </li>
+  </ul>
+>>>>>>> ff90399e85c932d5390f0bf9e0f59d82446e4794
 </div>
 
 <div>
@@ -59,6 +91,7 @@
   </ul>
 </div>
 
+<<<<<<< HEAD
 
 <div>
 <p class="footerIndex">
@@ -67,3 +100,11 @@
     minimal lifestyle within a busy schedule. Here's to our present moment
     having space to breathe, think and be.
 </p>
+=======
+<footer class="footerIndex">
+  Haiku Life Design is brought to you by Passionate Developers, Life Coaches,
+  Neuroscientists and people who simply NEED a way to follow through on the
+  minimal lifestyle within a busy schedule. Here's to our present moment having
+  space to breathe, think and be.
+</footer>
+>>>>>>> ff90399e85c932d5390f0bf9e0f59d82446e4794
