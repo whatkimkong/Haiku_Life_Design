@@ -1,6 +1,12 @@
- 
+{{#if isLoggedIn }}
+
+<div class="add-btn">
+    <a href="/path"><img class="icons-btn" src="/images/conversations2.png" />Begin a new Path</a>
+</div>
 <div>
-<h4>PATH DASHBOARD</h4>
+    <hr>
+    <h1 class="collections-title">DASHBOARD</h1>
+</div>
 
 <div class="haiku-card">
     {{#each paths}}
@@ -19,6 +25,16 @@
     <br>
     {{/each}}
 </div>
+
+{{else }}
+
+<div class="logged-out-m">
+<h1>Your Mess is Missin' Out!!<h1>
+<h4>Sign up to release yourself of clutter in a few small steps using our Path process</h4>
+</div>
+
+  
+{{/if }}
 
 
 {{#if isFinished }}

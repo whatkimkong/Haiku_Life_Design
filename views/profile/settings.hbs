@@ -1,6 +1,17 @@
+
+{{#if isLoggedIn}}
+
 <div>
+
+  <h1> {{ user.username }} </h1>
+  <h4> {{ user.email }} </h4>
+
   <p>Upload your profile photo - cloundinary</p>
-  <p>Username, >> INPUT FIELD >> Bio >> change password >> >> little quotes >>
-    CHOOSE YOUR AVATAR >> CHECK ICONS CSS ON WIREFRAME FOR EXAMPLE. ?? profile
-    photo serves purpose if conversations exist</p>
+  <p> Bio >> CHOOSE YOUR AVATAR >> CHECK ICONS CSS ON WIREFRAME FOR EXAMPLE. ?? profile
+    photo serves purpose if conversations exist
+    
+    change password >> >> little quotes >>
+    </p>
 </div>
+
+{{/if}}

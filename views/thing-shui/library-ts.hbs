@@ -1,9 +1,13 @@
 
 {{#if isLoggedIn }}
-<div>
-    <h2>Your Thing Shui Memento Chest</h2>
-    <a href="/thingshui/create" class="btn-mustard">Add a thing shui</a>
 
+<div class="add-btn">
+    <a href="/thingshui/create"><img class="icons-btn" src="/images/conversations2.png" />Add a thing shui</a>
+</div>
+
+<div>
+    <hr>
+    <h1 class="collections-title">THING SHUI COLLECTION</h1>
 </div>
 
 <div class="haiku-card">
@@ -25,7 +29,9 @@
 
 {{else }}
 
+<div class="logged-out-m">
 <h1>Your Mess is Missin' Out!!<h1>
-<h4>Sign up to Haiku your life down to the bare necessities</h4>
-  
+<h4>Sign up to "Thing Shui" your things, treasure the stories with us and let go of what isn't a fresh and future part of your day!</h4>
+</div>
+
 {{/if }}
