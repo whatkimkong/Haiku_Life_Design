@@ -1,4 +1,4 @@
-  {{#if isAdmin}}
+{{#if isAdmin}}
   <span class="indexBtns">
     <button class="btn-mustard">
       <a href="/blueprint">Admins - Create Blueprint</a>
@@ -7,58 +7,16 @@
       <a href="/stage">Admins - Create Stage</a>
     </button>
   </span>
-
-<div class="indexContainer">
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">LOGO</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
->
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/"><img
-                src="/public/images/box.png"
-              /></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/path">Paths</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/thingshui">THSH</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="/auth/login">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="/auth/signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
 {{/if }}
-
 
 <div class="icons">
     <ul class="icons">
         <li class="icon-l">
-            <a href="/"><img src="../public/images/box.png" width="64"></a>
-            <img src="../public/images/box.png" width="64">
+            <a href="/"><img src="/images/box.png"></a>
+         
         </li>
         <li class="icon-l">
-            <a href="/path">Paths</a>
+            <a href="/path"><img src="/images/droplet.png"></a>
         </li>
         <li class="icon-l">
             <a href="/thingshui">THSH</a>
@@ -85,7 +43,7 @@
         {{/if}}
         
         <li class="icon-r">
-            <a href="/auth/signup">Settings</a>
+            <a href="/auth/signup"><img src="/images/settings.png"></a>
         </li>
     </ul>
 </div>

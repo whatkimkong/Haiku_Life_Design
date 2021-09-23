@@ -20,6 +20,17 @@ Do we need to describe this shit?
 
 #e1bf54 slight mustier yellow
 
+#eab595 
+
+#aabbb3 dusty green
+#c9d6d0 its border
+
+
+#ffe6c8 coral pastel - 50-60% opacity
+#ffe6c8 its border
+
+#e4dddd shade of our #bbaaaa - 75% opacity
+#ebe6e6 its border
 
 # BLUEPRINT DRAFTS #
 
