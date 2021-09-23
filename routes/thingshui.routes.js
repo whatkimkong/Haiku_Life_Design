@@ -11,19 +11,22 @@ router.get("/thingshui", (req, res, next) => {
 });
 
 router.get("/thingshui/create", (req, res, next) => {
-    res.render("thing-shui/add-ts.hbs");
+    res.render("thing-shui/add-ts.hbs", { thing });
 });
+  
 
-router.post("/thingshui/create", (req, res, next) => {
+router.post("/thingshui/create", imageUploader.single('imageUrl') ,(req, res, next) => {
+    const imageUrl = req.file.thing; // is this correct?
     const { title, description } = req.body; // and the image?
-    ThingshuiModel.create({title, description})
-    .then(() => {
-        res.redirect(`/thingshui`); // back to the library where they are all displayed 
+    ThingshuiModel.create({title, description, $push: { images: imageUrl }} , { new: true } )
+    .then((freshlyCreatedThing) => {
+        res.redirect(`/thingshui/${freshlyCreatedThing._id}`); // back to the library where they are all displayed 
     })
     .catch((err) => {
       next(err)
     });
 });
+
 
 // only if they log in <3 
 
