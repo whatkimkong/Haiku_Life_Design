@@ -19,14 +19,54 @@
 
   <body>
 
-    {{{body}}}
+    <nav class="icons">
+      <ul class="icons">
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/script.js"></script>
+        <li class="icon-l">
+          <a href="/"><img class="iconsImg" src="/images/home.png" /></a>
+        </li>
+
+        <li class="icon-l">
+          <a href="/path"><img class="iconsImg" src="/images/paths.png" /></a>
+        </li>
+
+        <li class="icon-l">
+          <a href="/thingshui"><img
+              class="iconsImg"
+              src="/images/thingshui.png"
+            /></a>
+        </li>
+        {{#if isAdmin}}
+          <li class="icon-r">
+            <a href="/blueprint">Create Blueprint</a>
+          </li>
+          <li class="icon-r">
+            <a href="/stage">Create Stage</a>
+          </li>
+        {{/if}}
+        {{#if isLoggedIn}}
+          <li class="icon-r text">
+            <a href="/auth/logout">Log Out!</a>
+          </li>
+        {{else}}
+          <li class="icon-r text">
+            <a href="/auth/login">Log in</a>
+          </li>
+          <li class="icon-r text">
+            <a href="/auth/signup">Sign Up</a>
+          </li>
+        {{/if}}
+        <li class="icon-r">
+          <a href="/auth/signup"><img
+              class="iconsImg"
+              src="/images/settings.png"
+            /></a>
+        </li>
+      </ul>
+
+    </nav>
+
+    {{{body}}}
 
   </body>
 

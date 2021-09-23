@@ -1,45 +1,8 @@
-<div class="icons">
-    <ul class="icons">
-        <li class="icon-l">
-            <a href="/">Home</a>
-        </li>
-        <li class="icon-l">
-            <a href="/path">Paths</a>
-        </li>
-        <li class="icon-l">
-            <a href="/thingshui">THSH</a>
-        </li>
-        <li class="icon-l">
+<div class="container">
 
-        </li>
-    </ul>
-    <ul class="icons">
-        <li class="icon-r">
+  <h2 class="signUpTitle">Signup with Haiku Life Design</h2>
 
-        </li>
-        {{#if isLoggedIn}}
-        <li class="icon-r">
-            <a href="/auth/logout">Log Out!</a>
-        </li>
-        {{else}}
-        <li class="icon-r">
-            <a href="/auth/login">Log in</a>
-        </li>
-        <li class="icon-r">
-            <a href="/auth/signup">Sign Up</a>
-        </li>
-        {{/if}}
-        
-        <li class="icon-r">
-            <a href="/auth/signup">Settings</a>
-        </li>
-    </ul>
-</div>
-
-<div>
-  <h2>Signup with Haiku Life Design</h2>
-
-  <form action="/auth/signup" method="POST">
+  <form class="signUpForm" action="/auth/signup" method="POST">
 
     <label for="username">Username:</label>
     <input

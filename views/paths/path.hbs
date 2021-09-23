@@ -1,67 +1,31 @@
-<div class="icons">
-    <ul class="icons">
-        <li class="icon-l">
-            <a href="/">Home</a>
-        </li>
-        <li class="icon-l">
-            <a href="/path">Paths</a>
-        </li>
-        <li class="icon-l">
-            <a href="/thingshui">THSH</a>
-        </li>
-        <li class="icon-l">
+{{#if isFinished}}
+  <h1>You're finished and 1 step closer of being an haiku master!</h1>
+  <h3>Here's the journey...</h3>
+  {{#each path.images}}
+    {{#if @first}}
+      <img src="{{this}}" alt="" srcset="" />
+    {{/if}}
+    {{#if @last}}
+      <img src="{{this}}" alt="" srcset="" />
+    {{/if}}
+  {{/each}}
+{{else}}
 
-        </li>
-    </ul>
-    <ul class="icons">
-        <li class="icon-r">
+  <div>
+    <br />
+    <h4>{{stage.title}}</h4>
+    <br />
+    <h2>{{stage.description}} </h2>
+    <br />
+    <h1>{{stage.tip}}</h1>
 
-        </li>
-        {{#if isLoggedIn}}
-        <li class="icon-r">
-            <a href="/auth/logout">Log Out!</a>
-        </li>
-        {{else}}
-        <li class="icon-r">
-            <a href="/auth/login">Log in</a>
-        </li>
-        <li class="icon-r">
-            <a href="/auth/signup">Sign Up</a>
-        </li>
-        {{/if}}
-        
-        <li class="icon-r">
-            <a href="/auth/signup">Settings</a>
-        </li>
-    </ul>
-</div>
-
-
-{{#if isFinished }}
-    <h1>You're finished and 1 step closer of being an haiku master!</h1>
-    <h3>Here's the journey...</h3>
-    {{#each path.images}}
-        {{#if @first}}
-        <img src="{{ this }}" alt="" srcset="">
-        {{/if}}
-        {{#if @last}}
-        <img src="{{ this }}" alt="" srcset="">
-        {{/if}}
-    {{/each}}
-{{else }}
-
-<div>
-        <br>
-        <h4>{{ stage.title }}</h4>
-        <br>
-        <h2>{{ stage.description }} </h2>
-        <br>
-        <h1>{{ stage.tip }}</h1>
-
-    <form action="/paths/{{path._id}}" method="POST" enctype="multipart/form-data">
-        <input type="file" name="imageUrl" />
-        <button type="submit" class="btn-mustard">Level Up!!!!!</button>
+    <form
+      action="/paths/{{path._id}}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="imageUrl" />
+      <button type="submit" class="btn-mustard">Level Up!!!!!</button>
     </form>
-</div>
-{{/if  }}
-
+  </div>
+{{/if}}
