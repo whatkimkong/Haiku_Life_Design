@@ -6,7 +6,7 @@
   --primarycolor: azure;
   --secondarycolor: #bbaaaa;
   --thirdcolor: #e1bf54;
-  --ffprimary: 'Source Sans Pro'; 
+  --ffprimary: "Source Sans Pro";
 }
 body {
   padding: 40px;
@@ -22,48 +22,28 @@ a {
   text-decoration: none;
 }
 
+label {
+  font-size: 20px;
+}
 /* -----------------INDEX ADMIN------------------ */
-.indexContainer {
+.container {
   display: flex;
   position: relative;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-}
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  width: 100%;
-}
-
-.bg-light {
-  background-color: transparent !important;
-}
-
-.bodyIndex {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  margin: 24vh auto 0;
+  max-width: 100%;
 }
 
 /* ---------INDEX----------------- */
 
 .indexList {
   list-style: none;
-  font-size: 20px;
-  margin: 20vh auto;
+  font-size: 25px;
+  margin: 25vh auto;
   font-style: italic;
   letter-spacing: 0.5px;
-  font-weight: 0,200;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 38%;
+  font-weight: 600;
 }
 
 .indexBtns {
@@ -85,14 +65,18 @@ a {
   max-width: 100%;
   display: flex;
   justify-content: center;
-  padding-left: 40px;
-  text-align: justify;
+  width: 54%;
+  font-size: 15px;
 }
 /* ------------------------------ */
 
+/* ----NAVBAR----- */
+.iconsImg {
+  width: 35px;
+}
 
 .icons {
-  display:flex;
+  display: flex;
   flex-direction: row;
   width: 100%;
 }
@@ -111,21 +95,20 @@ a {
   width: 100%;
 }
 
+.icon-r.text {
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
 
 /* ---------FORMS and BUTTONS---------------- */
 
-
 input[type="text"],
 input[type="email"],
-input[type="password"],
-textarea,
-select {
+input[type="password"] {
   background-color: #c5c5c5;
   border-radius: 6px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 19px 0px;
@@ -139,10 +122,9 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-textarea:focus, select:focus {
+textarea:focus,
+select:focus {
   box-shadow: 0 0 5px #e9e7e2;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 20px 0px;
   border: 1px solid #eac552;
   display: flex;
   flex-direction: column;
@@ -152,25 +134,39 @@ textarea:focus, select:focus {
 .formScript {
   list-style: none;
   margin: 6vh auto;
-  font-weight: 0,200;
+  font-weight: 0, 200;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 28%;
 }
 
+.btn-mustard {
+  color: #eac552;
+  background-color: #bbaaaa;
+  text-decoration: none;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #eac552;
+  box-shadow: 0 0 5px #e9e7e2;
+  padding: 5px 3px 5px 3px;
+  border: 1px solid #eac552;
+}
 .form-btn {
   display: flex;
 }
 
+/* ------ SignUp -------- */
+/* ------ used in LogIn the same classes of SignUp----- */
+.signUpTitle {
+  margin-top: 15vh;
+}
 
+.signUpForm {
+  margin-top: 5vh;
+}
 
 /* ---------PATH DASHBOARD-------------- */
-
-
-
-
-
 
 /* ---------THING SHUI---------------- */
 
