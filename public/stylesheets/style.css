@@ -152,6 +152,9 @@ select:focus {
   padding: 5px 3px 5px 3px;
   border: 1px solid #eac552;
 }
+.form-btn {
+  display: flex;
+}
 
 /* ------ SignUp -------- */
 /* ------ used in LogIn the same classes of SignUp----- */

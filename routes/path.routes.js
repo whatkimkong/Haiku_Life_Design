@@ -68,4 +68,15 @@ router.get("/dashboard", (req, res, next) => {
   });
 });
 
+router.post('/paths/:id/delete', (req, res) => {
+  const { id } = req.params;
+  PathModel.findByIdAndDelete(id)
+      .then(() => { 
+          res.redirect(`/dashboard`);
+       })
+      .catch((err) => {
+          console.log(err);
+      });
+})
+
 module.exports = router;
