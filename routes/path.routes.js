@@ -21,7 +21,7 @@ router.post("/paths/create", (req, res, next) => {
   // receive the information from the form
   const { blueprint_id, title, description } = req.body;
   if(!req.session.loggedInUser){
-    res.redirect('/path')
+    res.redirect('/dashboard')
     return;
   }
   const user_id = req.session.loggedInUser._id;
@@ -48,11 +48,14 @@ router.get("/paths/:id", (req, res, next) => {
 });
 
 router.post("/paths/:id", imageUploader.single('imageUrl') ,(req, res, next) => {
-  const imageUrl = req.file.path; // LOOK AT THIS BEAUTY 
+  const imageUrl = req.file.path;
   PathModel.findByIdAndUpdate(req.params.id, { $push: { images: imageUrl }}, { new: true })
   .then((freshlyUpdatedPath) => {
     console.log(freshlyUpdatedPath)
     res.redirect(`/paths/${freshlyUpdatedPath._id}`);
+  })
+  .catch((err) => {
+    console.log(err, "Take a picture of your work to advance to the next step!");
   });
 }); 
 
