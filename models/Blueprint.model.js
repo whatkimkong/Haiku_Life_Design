@@ -21,6 +21,12 @@ const blueprintSchema = new Schema({
   title: {
     type: String,
     required: true,
+    enum: ["Drawer Destroyer",
+    "Wardrobe Warrior",
+    "Shelf Shaker",
+    "Desk Daze",
+    "SadoMasoPath - all of it!",
+    ],
   },
   admin_id: {
     type: Schema.Types.ObjectId,

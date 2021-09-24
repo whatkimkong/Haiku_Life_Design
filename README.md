@@ -9,6 +9,13 @@
 "sentimental",
 "miscellaneous",
 
+Title:
+
+Drawer Destroyer
+Wardrobe Warrior
+Shelf Shaker
+Desk Daze
+SadoMasoPath - all of it!
 
 >>>> I DONT THINK WE NEED ANYTHING ELSE HERE ::: 
 Do we need to describe this shit? 
@@ -120,10 +127,11 @@ Quiz-ish things
 Structure the stages like in >>> Fabulous??? Also pimpin the behavioural science
 https://www.thefabulous.co/onboarding/onboarding-steps/all-journeys#first-mountain 
 
-
-
    
-      IN THE PROCESS OF ACHIEVING A MORE MINIMAL LIFESTYLE.... Some of us,
+   
+Thing shui
+
+IN THE PROCESS OF ACHIEVING A MORE MINIMAL LIFESTYLE.... Some of us,
       namely at least half of the creators of this App, attach sentimental value
       to EVERYTHING. There is little need for the physical item to remain hidden
       in a box or cluttering a shelf somewhere forgotten.</p>

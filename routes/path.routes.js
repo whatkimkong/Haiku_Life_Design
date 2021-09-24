@@ -19,7 +19,7 @@ router.get("/path", (req, res, next) => {
 
 router.post("/paths/create", (req, res, next) => {
   // receive the information from the form
-  const { blueprint_id, title, description } = req.body;
+  const { blueprint_id, title_id, description } = req.body;
   if(!req.session.loggedInUser){
     res.redirect('/dashboard')
     return;
@@ -28,7 +28,7 @@ router.post("/paths/create", (req, res, next) => {
   // create path modeled on the selected blueprint
   BlueprintModel.findById(blueprint_id)
     .then((blueprint) => {
-      return PathModel.create({ blueprint_id, title, description, user_id, type: blueprint.type, stages: blueprint.stages })
+      return PathModel.create({ blueprint_id, title_id, description, user_id, type: blueprint.type, stages: blueprint.stages })
     })
     .then((freshlyCreatedPath) => {
       res.redirect(`/paths/${freshlyCreatedPath._id}`);

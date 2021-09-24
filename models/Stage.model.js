@@ -11,7 +11,6 @@ const stageSchema = new Schema({
   },
   tip: {
     type: String,
-    required: true,
   }
 });
 

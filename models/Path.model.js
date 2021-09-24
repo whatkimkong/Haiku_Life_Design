@@ -20,9 +20,9 @@ const pathSchema = new Schema(
       type: String,
       required: true,
     },
-    title: {
-        type: String,
-        required: true,
+    title_id: {
+      type: Schema.Types.ObjectId,
+      ref: "Blueprint",
     },
     user_id: {
       type: Schema.Types.ObjectId,
