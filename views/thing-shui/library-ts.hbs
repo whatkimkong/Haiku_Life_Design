@@ -14,11 +14,15 @@
     {{#each thingshuis}}
     <div class="card haiku-border" style="width: 18rem;">
             {{#if image}}
-            <img class="card" src="{{this.image}}" alt="Card image cap">
+            <img class="card image-tile" src="{{this.image}}" alt="Card image cap">
             {{/if}}
         <div class="card-body">
-            <p class="card-text title-text">{{this.title}}</p>
-            <a class="btn-mustard" href="" role="button">Edit</a>
+            <h6 class="card-text title-text card-details">{{this.title}}</h6>
+            <p class="card-subtitle mb-2 text-muted card-details">{{this.description}}</p>
+            <a class="card-details" href="" role="button"><img class="tile-btn-icon" src="/images/square.png"/>Edit</a>
+            <form action="/thingshui/{{ this._id }}/delete" method="POST">
+            <button type="submit" class="tile-btn-bg card-details"><img class="tile-btn-icon" src="/images/square.png"/>Delete</button>
+            </form>
         </div>
     </div>
     <br>

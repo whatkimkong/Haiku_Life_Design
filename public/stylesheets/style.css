@@ -25,6 +25,7 @@ a {
 label {
   font-size: 20px;
 }
+
 /* -----------------INDEX ADMIN------------------ */
 .container {
   display: flex;
@@ -49,6 +50,7 @@ label {
 .indexBtns {
   margin: 7vh auto;
 }
+
 .btn-mustard {
   color: var(--thirdcolor);
   background-color: var(--secondarycolor);
@@ -157,20 +159,6 @@ select:focus {
   padding: 5px 3px 5px 3px;
   border: 1px solid #eac552;
 }
-.form-btn {
-  display: flex;
-}
-
-.add-btn {
-  list-style: none;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
 
 /* unvisited link */
 a:link {
@@ -183,7 +171,7 @@ a:visited {
 }
 
 /* mouse over link */
-a:hover {
+a:hover, button:hover {
   color: #e1bf54;
 }
 
@@ -194,8 +182,34 @@ a:active {
 
 .icons-btn {
   width: 35px;
+  height: 35px;
   margin-right: 20px;
 }
+
+.tile-btn-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.tile-btn-bg {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  color: azure;
+}
+
+.form-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: azure;
+}
+
+
 /* ------ SignUp -------- */
 /* ------ used in LogIn the same classes of SignUp----- */
 .signUpTitle {
@@ -210,15 +224,55 @@ a:active {
   list-style: none;
   font-size: 25px;
   margin: 25vh auto;
+  width: 50%;
   font-style: italic;
   letter-spacing: 0.5px;
   font-weight: 600;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
 }
 /* ---------PATH DASHBOARD-------------- */
+
+/* on top of dashboard and thingshui */
+.add-btn {
+  list-style: none;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* ---------PATH and STAGES--------------------- */
+
+.path {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 50%;
+}
+
+.path-text {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  color: azure;
+  width: 100%;
+}
+
+.icons-btn-path {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
 
 /* ---------THING SHUI---------------- */
 
@@ -235,13 +289,29 @@ a:active {
   flex-wrap: wrap;
   justify-content: center;
 }
+.card-details {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
 
 .haiku-border {
-  background-color: #bbaaaa;
+  background-color: #aabbb3;
   text-decoration: none;
   border-width: 1px;
   border-radius: 8px;
-  border-color: #eac552;
+  border-color: #c9d6d0;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+.image-tile {
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: #c9d6d0;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }

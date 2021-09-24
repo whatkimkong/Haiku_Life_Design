@@ -1,3 +1,4 @@
+
 {{#if isFinished}}
   <h1>You're finished and 1 step closer of being an haiku master!</h1>
   <h3>Here's the journey...</h3>
@@ -11,21 +12,18 @@
   {{/each}}
 {{else}}
 
-  <div>
-    <br />
-    <h4>{{stage.title}}</h4>
-    <br />
-    <h2>{{stage.description}} </h2>
-    <br />
-    <h1>{{stage.tip}}</h1>
 
+  <div class="path">
+    <h3 class="path-text">{{stage.title}}</h3>
+    <h5 class="path-text">{{stage.description}} </h5>
+    <h6 class="path-text">{{stage.tip}}</h6>
     <form
       action="/paths/{{path._id}}"
       method="POST"
       enctype="multipart/form-data"
     >
-      <input type="file" name="imageUrl" />
-      <button type="submit" class="btn-mustard">Level Up!!!!!</button>
+    <input class="path-text" type="file" name="imageUrl" />
+    <button type="submit" class="path-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level Up!!!!!</button>
     </form>
   </div>
 {{/if}}

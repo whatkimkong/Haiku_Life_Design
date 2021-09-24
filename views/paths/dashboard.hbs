@@ -10,15 +10,15 @@
 
 <div class="haiku-card">
     {{#each paths}}
-    <div class="haiku-border" style="width: 18rem;">
+    <div class="card haiku-border" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{this.type}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{this.title}}</h6>
-            <p class="card-text">{{this.stage}}</p>
-            <a href="/paths/{{this._id}}" class="card-link">Continue on this path</a>
+            <h5 class="card-title card-details">{{this.type}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted card-details">{{this.title}}</h6>
+            <p class="card-text card-details">{{this.stage}}</p>
+            <a href="/paths/{{this._id}}" class="card-link card-details"><img class="tile-btn-icon" src="/images/square.png"/>Continue on this path</a>
 
             <form action="/paths/{{ this._id }}/delete" method="POST">
-            <button type="submit" class="btn-mustard">Delete</button>
+            <button type="submit" class="tile-btn-bg card-details"><img class="tile-btn-icon" src="/images/square.png"/>Delete</button>
             </form>
         </div>
     </div>
