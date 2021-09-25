@@ -273,6 +273,17 @@ a:active {
   width: 100%;
 }
 
+.stage-text {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  color: azure;
+  text-align: justify;
+  width: 50%;
+}
+
 .icons-btn-path {
   width: 25px;
   height: 25px;

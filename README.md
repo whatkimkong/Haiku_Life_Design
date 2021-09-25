@@ -17,6 +17,20 @@ Shelf Shaker
 Desk Daze
 SadoMasoPath - all of it!
 
+#
+Desk / Table
+Workstation
+Box 
+Random Corner
+
+
+# stick to 
+Drawer Destroyer
+Wardrobe Warrior
+Shelf Shaker
+SadoMasoPath - all of it!
+
+
 >>>> I DONT THINK WE NEED ANYTHING ELSE HERE ::: 
 Do we need to describe this shit? 
 
@@ -108,7 +122,7 @@ If you haven't enough time or money to buy different sized boxes, gather Shoe bo
 >> Stage 5 : Title 
 
 Description
-You have done it, to complete the process, take a picture of your end result!!! <3
+You have done it, to complete the process, take a picture of your end result!!!
 
 Tip
 --

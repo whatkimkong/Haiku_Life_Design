@@ -5,16 +5,16 @@
     <label for="blueprint_id">Choose The Next Breathable Area:</label>
     <select name="blueprint_id">
     {{#each blueprints}}
-      <option value="{{this._id}}">{{this.type}}</option>
+      <option value="{{this._id}}">{{this.title}} | {{this.type}}</option>
     {{/each}}
     </select>
 
-    <label for="title_id">Plan of Attack:</label>
+    {{!-- <label for="title_id">Plan of Attack:</label>
     <select name="title_id">
     {{#each blueprints}}
       <option value="{{this._id}}">{{this.title}}</option>
     {{/each}}
-    </select>
+    </select> --}}
 
     <label for="description">Description:</label>
     <textarea name="description" cols="30" rows="10"></textarea>

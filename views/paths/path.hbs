@@ -12,17 +12,17 @@
   {{/each}}
 {{else}}
 
-  <div class="path">
-    <h3 class="path-text">{{stage.title}}</h3>
-    <h5 class="path-text">{{stage.description}} </h5>
-    <h6 class="path-text">{{stage.tip}}</h6>
+  <div class="container">
+    <h3 class="stage-text" >{{stage.title}}</h3>
+    <h5 class="stage-text" >{{stage.description}} </h5>
+    <h6 class="stage-text">{{stage.tip}}</h6>
     <form
       action="/paths/{{path._id}}"
       method="POST"
       enctype="multipart/form-data"
     >
-    <input class="path-text" type="file" name="imageUrl" />
-    <button type="submit" class="path-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level Up!!!!!</button>
+    <input class="stage-text" type="file" name="imageUrl" />
+    <button type="submit" class="stage-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level Up!!!!!</button>
     </form>
   </div>
 </div>
