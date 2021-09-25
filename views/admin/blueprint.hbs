@@ -1,43 +1,47 @@
-<div>
-  <a href="/auth/login" class="btn-mustard">Login!</a>
-  <a href="/auth/signup" class="btn-mustard">Sign Up!</a>
+<div class="container">
 
-  <a href="/blueprint" class="btn-mustard">Admins - Create Blueprint!</a>
-  <a href="/stage" class="btn-mustard">Admins - Create Stage!</a>
-  <br />
-  <br />
-</div>
+  <div class="blueprintBtns">
+    <a href="/auth/login" class="btn-mustard blueprintBtnLink">Login!</a>
+    <a href="/auth/signup" class="btn-mustard blueprintBtnLink">Sign Up!</a>
 
-<div>
-  <h2> Add a new Blueprint</h2>
-  <form action="/blueprint" method="POST">
+    <a href="/blueprint" class="btn-mustard blueprintBtnLink">Admins - Create
+      Blueprint!</a>
+    <a href="/stage" class="btn-mustard blueprintBtnLink">Admins - Create Stage!</a>
+    <br />
+    <br />
+  </div>
 
-    <label for="type">Type:</label>
-    <select name="type">
-      <option value="clothing, shoes & accessories">Clothing, Shoes &
-        Accessories</option>
-      <option value="electronics & cables">Electronics & Cables</option>
-      <option value="kitchen">Kitchen</option>
-      <option value="bathroom">Bathroom</option>
-      <option value="paperwork">Paperwork</option>
-      <option value="books">Books</option>
-      <option value="sentimental">Sentimental</option>
-      <option value="miscellaneous">Miscellaneous</option>
-    </select>
+  <div class="blueprintBody">
+    <h2> Add a new Blueprint</h2>
+    <form action="/blueprint" method="POST">
 
-    <label for="title">Title:</label>
-    <select name="title">
-      <option value="Drawer Destroyer">Drawer Destroyer</option>
-      <option value="Wardrobe Warrior">Wardrobe Warrior</option>
-      <option value="Shelf Shaker">Shelf Shaker</option>
-      <option value="Desk Daze">Desk Daze</option>
-      <option value="SadoMasoPath - all of it!">SadoMasoPath - all of it!</option>
-    </select>
+      <label for="type">Type:</label>
+      <select name="type">
+        <option value="clothing, shoes & accessories">Clothing, Shoes &
+          Accessories</option>
+        <option value="electronics & cables">Electronics & Cables</option>
+        <option value="kitchen">Kitchen</option>
+        <option value="bathroom">Bathroom</option>
+        <option value="paperwork">Paperwork</option>
+        <option value="books">Books</option>
+        <option value="sentimental">Sentimental</option>
+        <option value="miscellaneous">Miscellaneous</option>
+      </select>
 
-    <label for="description">Description:</label>
-    <textarea name="description" cols="30" rows="10"></textarea>
+      <label for="title">Title:</label>
+      <select name="title">
+        <option value="Drawer Destroyer">Drawer Destroyer</option>
+        <option value="Wardrobe Warrior">Wardrobe Warrior</option>
+        <option value="Shelf Shaker">Shelf Shaker</option>
+        <option value="Desk Daze">Desk Daze</option>
+        <option value="SadoMasoPath - all of it!">SadoMasoPath - all of it!</option>
+      </select>
 
-    <button type="submit" class="btn-mustard">Add Blueprint!</button>
+      <label for="description">Description:</label>
+      <textarea name="description" cols="30" rows="10"></textarea>
 
-  </form>
+      <button type="submit" class="btn-mustard">Add Blueprint!</button>
+
+    </form>
+  </div>
 </div>
