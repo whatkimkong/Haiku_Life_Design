@@ -1,29 +1,43 @@
+<div class="container">
+  {{#if isFinished}}
+  <h3 class="stage-text path-title">You're finished and on your way to becoming a Haiku Master!</h1>
+  <h5 class="stage-text text-muted">Here's your journey... Give yourself the credit thats due!!!!!!!</h3>
+</div>
 
-{{#if isFinished}}
-  <h1>You're finished and 1 step closer of being an haiku master!</h1>
-  <h3>Here's the journey...</h3>
   {{#each path.images}}
+<div class="haiku-card">
+    <div class="card haiku-border" style="width: 18rem;">
     {{#if @first}}
-      <img src="{{this}}" alt="" srcset="" />
+      <img class="card image-tile" src="{{this}}" alt="Card image cap" srcset="" />
     {{/if}}
     {{#if @last}}
-      <img src="{{this}}" alt="" srcset="" />
-    {{/if}}
+      <img class="card image-tile" src="{{this}}" alt="Card image cap" srcset="" />
+    {{/if}}   
+    </div>
+</div>
   {{/each}}
-{{else}}
+  
+  {{else}}
 
-  <div class="container">
-    <h3 class="stage-text" >{{stage.title}}</h3>
-    <h5 class="stage-text" >{{stage.description}} </h5>
-    <h6 class="stage-text">{{stage.tip}}</h6>
-    <form
-      action="/paths/{{path._id}}"
-      method="POST"
-      enctype="multipart/form-data"
-    >
+<div class="container">
+  <h3 class="stage-text path-title">{{stage.title}}</h3>
+  <h5 class="stage-text text-muted">{{stage.description}} </h5>
+  <form action="/paths/{{path._id}}" method="POST" enctype="multipart/form-data">
     <input class="stage-text" type="file" name="imageUrl" />
-    <button type="submit" class="stage-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level Up!!!!!</button>
-    </form>
+    <button type="submit" class="stage-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level
+      Up!!!!!</button>
+  </form>
+
+  {{#if stage.tip}}
+  <div class="haiku-card path-title">
+    <div class="card haiku-border" style="width: 18rem;">
+      <div class="card-body">
+
+        <h6 class="text-muted">NEED A TIP?</h6>
+        <p class="card-subtitle mb-2 text-muted card-details">{{stage.tip}}</p>
+      </div>
+    </div>
   </div>
+  {{/if}}
 </div>
 {{/if}}

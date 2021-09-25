@@ -74,7 +74,12 @@ label {
 
 /* ----NAVBAR----- */
 .iconsImg {
-  width: 35px;
+  width: 27px;
+  margin-top: 10px;
+}
+
+.iconsImgLogo {
+  width: 50px;
 }
 
 .icons {
@@ -282,6 +287,10 @@ a:active {
   color: azure;
   text-align: justify;
   width: 50%;
+}
+
+.path-title {
+  margin-top: 2em;
 }
 
 .icons-btn-path {
