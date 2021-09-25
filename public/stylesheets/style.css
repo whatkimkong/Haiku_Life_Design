@@ -103,6 +103,11 @@ label {
   align-items: center;
 }
 
+.icon-r.textPath {
+  font-size: 19px;
+  align-items: center;
+}
+
 /* ---------FORMS and BUTTONS---------------- */
 
 input[type="text"],
@@ -120,10 +125,11 @@ select {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 19px 0px;
   border: 1px solid #cfbdbd;
-  color: bisque;
+  color: rgb(204, 124, 27);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 17px;
 }
 
 input[type="text"]:focus,
@@ -171,7 +177,8 @@ a:visited {
 }
 
 /* mouse over link */
-a:hover, button:hover {
+a:hover,
+button:hover {
   color: #e1bf54;
 }
 
@@ -208,7 +215,6 @@ a:active {
   border: none;
   color: azure;
 }
-
 
 /* ------ SignUp -------- */
 /* ------ used in LogIn the same classes of SignUp----- */
@@ -273,7 +279,6 @@ a:active {
   margin-right: 20px;
 }
 
-
 /* ---------THING SHUI---------------- */
 
 .collections-title {
@@ -331,4 +336,25 @@ a:active {
   text-align: justify;
   width: 54%;
   font-size: 15px;
+}
+
+/* ------------------ Blueprint  and Stage----------*/
+
+.blueprintBtns {
+  margin-top: 7em;
+}
+.blueprintBtnLink {
+  margin-left: 5em;
+}
+
+.blueprintBody {
+  margin-top: 2em;
+}
+
+/* ---------------- Settings ------------- */
+
+.settingsBody {
+  margin-top: 5em;
+  font-size: 22px;
+  width: 60%;
 }
