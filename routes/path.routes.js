@@ -12,7 +12,7 @@ const imageUploader = require('../config/cloudinary.config');
 
 
 router.get("/path", (req, res, next) => {
-  BlueprintModel.find().then((blueprints) => {
+  BlueprintModel.find().sort({type: 1}).then((blueprints) => {
     res.render("paths/add-path.hbs", { blueprints });
   });
 });
