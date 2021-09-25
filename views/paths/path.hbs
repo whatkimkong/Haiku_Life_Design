@@ -24,9 +24,11 @@
   <h5 class="stage-text text-muted">{{stage.description}} </h5>
   <form action="/paths/{{path._id}}" method="POST" enctype="multipart/form-data">
     <input class="stage-text" type="file" name="imageUrl" />
-    <button type="submit" class="stage-text"><img class="icons-btn-path" src="/images/conversations2.png" />Level
-      Up!!!!!</button>
+  <br>
+    <button type="submit" class="stage-text"><img class="icons-btn-path" src="/images/conversations2.png" /><h6>Level
+      Up!!!!!</h6></button>
   </form>
+<h6 class="stage-text text-muted">Take a photo to document your Haiku Path</h6>
 
   {{#if stage.tip}}
   <div class="haiku-card path-title">
