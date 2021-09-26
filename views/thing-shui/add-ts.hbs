@@ -1,5 +1,24 @@
-<div>
-  <form action="/thingshui/create" method="POST" class="formScript" enctype="multipart/form-data">
+<div class="formScript-ts">
+ <div class="ts-card path-title">
+    <div class="card haiku-border" style="width: 18rem;">
+      <div class="card-body">
+        <br>
+        <h6 class="text-muted">Welcome to your "Thing Shui" Collection entry</h6>
+        <br>
+        <p class="card-subtitle mb-2 text-muted card-details">Help yourself let go from the material, with this little Commemoration.
+        </p>
+        <br>
+        <p class="text-muted">If you want you can write a few words, a memory, a story, journal entry,
+          to not forget it or its meaning to you and LET IT GO.</p>
+        <br />
+        <p class="text-muted">If you need help to stop bringing stuff home, bought or not,
+          try instead to think of whether you really need the object or will a story and picture suffice, and rescue
+          its dignity from being another non-essential item in your home.</p>
+      </div>
+    </div>
+  </div>
+
+  <form action="/thingshui/create" method="POST" enctype="multipart/form-data" class="ts-add-form ts-card">
 
     <label for="title">Title:</label>
     <input type="text" name="title" />
@@ -9,18 +28,10 @@
 
     <input type="file" name="imageUrl"/>
 
-    <button type="submit" class="path-text"><img class="icons-btn-path" src="/images/conversations2.png" />"Thing Shui" your Thing</button>
+    <button type="submit" class="icon-btn"><img
+              class="iconsImg-btn"
+              src="/images/pic.png"
+            />"Thing Shui" your Thing</button>
 
   </form>
-</div>
-
-<div>
-  <footer class="footerIndex">
-    <p>If you want you can write a few words, a memory, a story, journal entry,
-      to not forget it or its meaning to you and LET IT GO.</p>
-    <br />
-    <p>If you need help to stop bringing stuff home, bought or not, 
-      try instead to think of whether you really need the object or will a story and picture suffice, and rescue
-      its dignity from being another non-essential item in your home.</p>
-  </footer>
 </div>

@@ -9,8 +9,7 @@
   --ffprimary: "Source Sans Pro";
 }
 body {
-  padding: 40px;
-  padding-right: 80px;
+  padding: 30px;
   font-size: 14px;
   font-family: var(--ffprimary);
   background-color: var(--secondarycolor);
@@ -33,32 +32,18 @@ label {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 88%;
 }
 
 /* ---------INDEX----------------- */
 
 .indexList {
   list-style: none;
-  font-size: 25px;
-  margin: 25vh auto;
+  font-size: min(max(15px, 1.7vw));
+  margin: 14vh auto;
   font-style: italic;
   letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-.indexBtns {
-  margin: 7vh auto;
-}
-
-.btn-mustard {
-  color: var(--thirdcolor);
-  background-color: var(--secondarycolor);
-  text-decoration: none;
-  border: 1px solid var(--thirdcolor);
-  border-radius: 4px;
-  box-shadow: 0 0 5px #e9e7e2;
-  padding: 5px 3px 5px 3px;
+  font-weight: 300;
 }
 
 .footerIndex {
@@ -66,20 +51,24 @@ label {
   color: grey;
   max-width: 100%;
   display: flex;
+  text-align: justify;
   justify-content: center;
-  width: 54%;
-  font-size: 15px;
+  font-size: min(max(14px, 1.5vw));
+  margin-top: 10vh;
 }
 /* ------------------------------ */
 
 /* ----NAVBAR----- */
 .iconsImg {
-  width: 45px;
+  width: 7vw;
+  max-width: 45px;
   margin-top: 10px;
 }
 
 .iconsImgLogo {
-  width: 55px;
+  width: 12vw;
+  max-width: 60px;
+  margin-right: 19px;
 }
 
 .icons {
@@ -102,15 +91,14 @@ label {
   width: 100%;
 }
 
-.icon-r.text {
-  font-size: 20px;
+.icon-r-text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: min(max(13px, 1.5vw));
+  width: 100%;
   font-weight: bold;
   align-items: center;
-}
-
-.icon-r.textPath {
-  font-size: 19px;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* ---------FORMS and BUTTONS---------------- */
@@ -135,6 +123,7 @@ select {
   flex-direction: column;
   justify-content: center;
   font-size: 17px;
+  width: 100%;
 }
 
 input[type="text"]:focus,
@@ -149,6 +138,25 @@ select:focus {
   justify-content: center;
 }
 
+input[type="file"]::file-selector-button {
+  border: 1px solid #c9d6d0;
+  padding: .2em .4em;
+  border-radius: .3em;
+  background-color: #aabbb3;
+  color:grey;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 0vw;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #92a19a;
+  border: 1px solid #c9d6d0;
+  color: azure;
+}
+
 .formScript {
   list-style: none;
   margin: 6vh auto;
@@ -159,16 +167,25 @@ select:focus {
   width: 28%;
 }
 
-.btn-mustard {
-  color: #eac552;
-  background-color: #bbaaaa;
-  text-decoration: none;
-  border-width: 1px;
-  border-radius: 8px;
-  border-color: #eac552;
-  box-shadow: 0 0 5px #e9e7e2;
-  padding: 5px 3px 5px 3px;
-  border: 1px solid #eac552;
+.formScript-ts {
+  list-style: none;
+  margin: 3vh auto;
+  font-weight: 0, 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40vw;
+}
+.ts-add-form {
+  margin-right: 45px;
+  min-width: 50vw;
+}
+
+.ts-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* unvisited link */
@@ -192,10 +209,22 @@ a:active {
   color: #e1bf54;
 }
 
-.icons-btn {
-  width: 35px;
-  height: 35px;
+.icon-btn {
+  width: 100%;
+  margin-top: 10px;
   margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  color: azure;
+  align-items: center;
+}
+
+.iconsImg-btn {
+  width: 7vw;
+  max-width: 30px;
+  margin-right: 10px;
 }
 
 .tile-btn-icon {
@@ -224,11 +253,9 @@ a:active {
 /* ------ SignUp -------- */
 /* ------ used in LogIn the same classes of SignUp----- */
 .signUpTitle {
-  margin-top: 15vh;
-}
-
-.signUpForm {
-  margin-top: 5vh;
+  margin-top: 10vh;
+  display: flex;
+  text-align: center;
 }
 
 .logged-out-m {
@@ -248,13 +275,23 @@ a:active {
 /* on top of dashboard and thingshui */
 .add-btn {
   list-style: none;
-  font-size: 20px;
+  font-size: min(max(16px, 1.7vw));
   letter-spacing: 0.5px;
-  font-weight: 600;
+  font-weight: 300;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 50px;
+  margin-top: 14vh;
+  margin-bottom: 6vh;
+}
+
+.add-btn-icon {
+  margin-right: 20px;
+  width: 8vw;
+  max-width: 30px;
+  background-color: transparent;
+  border: none;
+  display: flex;
 }
 
 /* ---------PATH and STAGES--------------------- */
@@ -313,6 +350,7 @@ a:active {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 .card-details {
   display: flex;

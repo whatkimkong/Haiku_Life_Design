@@ -17,9 +17,9 @@
 
   </head>
 
-  <body>
+  <body style="padding-left:0px">
 
-    <nav class="icons">
+    <nav class="container">
       <ul class="icons">
 
         <li class="icon-l">
@@ -38,14 +38,16 @@
               class="iconsImg"
               src="/images/treasurebox.png"
             /></a>
-        </li>
         {{#if isAdmin}}
           <li class="icon-r textPath">
-            <a href="/blueprint">Create Blueprint</a>
+            <a href="/blueprint"><img
+              class="iconsImg"
+              src="/images/thingshui2.png"
+            /></a>
           </li>
         {{/if}}
         {{#if isLoggedIn}}
-          <li class="icon-r text">
+          <li class="icon-r-text">
             <a href="/auth/logout">Log Out!</a>
           </li>
 
@@ -56,10 +58,10 @@
               /></a>
           </li>
         {{else}}
-          <li class="icon-r text">
+          <li class="icon-r-text">
             <a href="/auth/login">Log in</a>
           </li>
-          <li class="icon-r text">
+          <li class="icon-r-text">
             <a href="/auth/signup">Sign Up</a>
           </li>
         {{/if}}
