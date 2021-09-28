@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const BlueprintModel = require("../models/Blueprint.model");
 const PathModel = require("../models/Path.model");
-// const StageModel = require("../models/Stage.model");
+const StageModel = require("../models/Stage.model");
 
 // ... all imports stay unchanged
 // ********* require fileUploader in order to use it *********
@@ -67,9 +67,10 @@ router.post("/paths/:id", imageUploader.single('imageUrl') ,(req, res, next) => 
 router.get("/dashboard", (req, res, next) => {
   PathModel.find().populate()
   .then((paths) => {
-  res.render("paths/dashboard.hbs", {paths}); // RENDER THE VIEW // SHOW THIS VIEW
-  });
+    res.render("paths/dashboard.hbs", {paths})
+  }) // RENDER THE VIEW // SHOW THIS VIEW
 });
+
 
 router.post('/paths/:id/delete', (req, res) => {
   const { id } = req.params;

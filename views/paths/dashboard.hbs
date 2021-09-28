@@ -13,8 +13,9 @@
     <div class="card haiku-border" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title card-details">{{this.type}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted card-details">{{this.title}}</h6>
-            <p class="card-text card-details">{{this.stage}}</p>
+            {{!-- <h5 class="card-subtitle mb-2 card-details">| blueprint title |</h5> --}}
+            <h6 class="card-subtitle mb-2 text-muted card-details">{{this.description}}</h6>
+            {{!-- <p class="card-text card-details">| stage title |</p> --}}
             <a href="/paths/{{this._id}}" class="card-link card-details"><img class="tile-btn-icon" src="/images/square.png"/>Continue on this path</a>
 
             <form action="/paths/{{ this._id }}/delete" method="POST">
